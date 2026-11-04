@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)file:///C:/Users/nisa/OneDrive%20-%20Microsoft/Documents/Microsoft%20Scout/project-checklist.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLM Final Project Checklist</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #121a33;
+      --text: #e8ecff;
+      --muted: #a7b1d8;
+      --accent: #6ea8fe;
+      --ok: #4cd97b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Segoe UI, Arial, sans-serif;
+      background: linear-gradient(135deg, #0b1020, #0f1730);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    .wrap {
+      max-width: 960px;
+      margin: 24px auto;
+      padding: 0 16px 24px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid #22305a;
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+    }
+    h1, h2 { margin: 0 0 10px; }
+    h1 { font-size: 1.55rem; color: #ffffff; }
+    h2 { font-size: 1.1rem; color: var(--accent); }
+    p { margin: 0 0 10px; color: var(--muted); }
+    ul { margin: 8px 0 0 0; padding-left: 0; list-style: none; }
+    li { margin: 8px 0; }
+    label { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; }
+    input[type="checkbox"] { margin-top: 3px; transform: scale(1.1); }
+    .done { color: var(--ok); text-decoration: line-through; }
+    .footer { color: var(--muted); font-size: 0.9rem; }
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    button {
+      border: 1px solid #2f447f;
+      background: #1a2850;
+      color: var(--text);
+      border-radius: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    button:hover { background: #223467; }
+    .progress {
+      font-weight: 600;
+      color: #d8e2ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>LLM Final Project Checklist</h1>
+      <p>Track completion for your team’s final project package.</p>
+      <p class="progress">Progress: <span id="progress">0 / 27 complete</span></p>
+      <div class="toolbar">
+        <button id="checkAll">Check all</button>
+        <button id="uncheckAll">Uncheck all</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Core Project Requirements</h2>
+      <ul>
+        <li><label><input type="checkbox" class="item">Defined a clear applied use case and target users</label></li>
+        <li><label><input type="checkbox" class="item">Integrated an LLM (API/hosted/open model) and documented model/service used</label></li>
+        <li><label><input type="checkbox" class="item">Implemented customized prompting/instruction strategy</label></li>
+        <li><label><input type="checkbox" class="item">Added at least one advanced feature (context handling, evaluation, or safety)</label></li>
+        <li><label><input type="checkbox" class="item">Created test scenarios with evaluation criteria</label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Deliverable 1: GitHub Repository</h2>
+      <ul>
+        <li><label><input type="checkbox" class="item">Repository URL ready and shareable</label></li>
+        <li><label><input type="checkbox" class="item">Source code / notebooks / scripts included</label></li>
+        <li><label><input type="checkbox" class="item">Prompt files/instructions/templates included</label></li>
+        <li><label><input type="checkbox" class="item">Testing/evaluation materials included</label></li>
+        <li><label><input type="checkbox" class="item">README includes setup, usage, model/API, limitations, and review steps</label></li>
+        <li><label><input type="checkbox" class="item">No secrets, API keys, or private credentials committed</label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Deliverable 2: Project Documentation</h2>
+      <ul>
+        <li><label><input type="checkbox" class="item">Title, purpose, intended users, and use case explained</label></li>
+        <li><label><input type="checkbox" class="item">System design/workflow and LLM integration documented</label></li>
+        <li><label><input type="checkbox" class="item">Prompt/customization strategy and revisions explained</label></li>
+        <li><label><input type="checkbox" class="item">Testing process, results, and changes summarized</label></li>
+        <li><label><input type="checkbox" class="item">Known limitations and failure modes described</label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Deliverable 3: Prompt + Testing Appendix</h2>
+      <ul>
+        <li><label><input type="checkbox" class="item">Major prompts/system instructions listed</label></li>
+        <li><label><input type="checkbox" class="item">Test cases and evaluation criteria listed</label></li>
+        <li><label><input type="checkbox" class="item">Selected outputs included as evidence of iteration</label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Deliverable 4: AI Use + Ethical Reflection</h2>
+      <ul>
+        <li><label><input type="checkbox" class="item">Explained how AI tools were used during development</label></li>
+        <li><label><input type="checkbox" class="item">Documented verification/modification of AI-generated suggestions</label></li>
+        <li><label><input type="checkbox" class="item">Addressed key risks: hallucination, bias, privacy, misuse, oversight</label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Deliverable 5: Final Presentation + Demo</h2>
+      <ul>
+        <li><label><input type="checkbox" class="item">Recorded presentation is 10–15 minutes total</label></li>
+        <li><label><input type="checkbox" class="item">Intro section is concise (≤ 5 minutes)</label></li>
+        <li><label><input type="checkbox" class="item">Live demo/code walkthrough is at least 5 minutes</label></li>
+        <li><label><input type="checkbox" class="item">Demonstrates prompts, context/safety/evaluation feature, and one test scenario</label></li>
+        <li><label><input type="checkbox" class="item">Clearly explains limitations and future improvements</label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <p class="footer">Tip: This checklist saves your progress in your browser using localStorage.</p>
+    </div>
+  </div>
+
+  <script>
+    const KEY = "llm-final-project-checklist-v1";
+    const boxes = [...document.querySelectorAll(".item")];
+    const progressEl = document.getElementById("progress");
+
+    function render() {
+      let complete = 0;
+      boxes.forEach((box) => {
+        const text = box.parentElement;
+        if (box.checked) {
+          complete += 1;
+          text.classList.add("done");
+        } else {
+          text.classList.remove("done");
+        }
+      });
+      progressEl.textContent = `${complete} / ${boxes.length} complete`;
+    }
+
+    function save() {
+      const state = boxes.map((b) => b.checked);
+      localStorage.setItem(KEY, JSON.stringify(state));
+    }
+
+    function load() {
+      const raw = localStorage.getItem(KEY);
+      if (!raw) return;
+      const state = JSON.parse(raw);
+      if (!Array.isArray(state)) return;
+      boxes.forEach((b, i) => { b.checked = Boolean(state[i]); });
+    }
+
+    boxes.forEach((b) => b.addEventListener("change", () => { save(); render(); }));
+    document.getElementById("checkAll").addEventListener("click", () => {
+      boxes.forEach((b) => { b.checked = true; });
+      save();
+      render();
+    });
+    document.getElementById("uncheckAll").addEventListener("click", () => {
+      boxes.forEach((b) => { b.checked = false; });
+      save();
+      render();
+    });
+
+    load();
+    render();
+  </script>
+
+
+</body></html>
