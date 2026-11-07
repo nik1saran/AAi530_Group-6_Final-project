@@ -1,6 +1,6 @@
 {
-  "ingestion_run_id": "run_20261107_070819Z",
-  "generated_at_utc": "2026-11-07T07:08:19Z",
+  "ingestion_run_id": "run_20261107_075045Z",
+  "generated_at_utc": "2026-11-07T07:50:45Z",
   "records": [
     {
       "record_id": "r1",
@@ -26,7 +26,7 @@
       "is_superseded": false,
       "supersedes_record_id": null,
       "evidence_notes": "tier=tier_a corroboration=0 freshness=moderate conflicts=0",
-      "ingestion_run_id": "run_20261107_070819Z"
+      "ingestion_run_id": "run_20261107_075045Z"
     },
     {
       "record_id": "r2",
@@ -72,7 +72,7 @@
       "is_superseded": false,
       "supersedes_record_id": null,
       "evidence_notes": "tier=tier_a corroboration=1 freshness=moderate conflicts=2",
-      "ingestion_run_id": "run_20261107_070819Z"
+      "ingestion_run_id": "run_20261107_075045Z"
     },
     {
       "record_id": "r3",
@@ -118,7 +118,7 @@
       "is_superseded": true,
       "supersedes_record_id": "r2",
       "evidence_notes": "tier=tier_b corroboration=1 freshness=moderate conflicts=2",
-      "ingestion_run_id": "run_20261107_070819Z"
+      "ingestion_run_id": "run_20261107_075045Z"
     },
     {
       "record_id": "r4",
@@ -144,7 +144,7 @@
       "is_superseded": false,
       "supersedes_record_id": null,
       "evidence_notes": "tier=tier_c corroboration=0 freshness=moderate conflicts=0",
-      "ingestion_run_id": "run_20261107_070819Z"
+      "ingestion_run_id": "run_20261107_075045Z"
     },
     {
       "record_id": "r5",
@@ -170,7 +170,7 @@
       "is_superseded": false,
       "supersedes_record_id": null,
       "evidence_notes": "tier=tier_a corroboration=1 freshness=moderate conflicts=0",
-      "ingestion_run_id": "run_20261107_070819Z"
+      "ingestion_run_id": "run_20261107_075045Z"
     },
     {
       "record_id": "r6",
@@ -196,7 +196,7 @@
       "is_superseded": true,
       "supersedes_record_id": "r5",
       "evidence_notes": "tier=tier_b corroboration=1 freshness=moderate conflicts=0",
-      "ingestion_run_id": "run_20261107_070819Z"
+      "ingestion_run_id": "run_20261107_075045Z"
     }
   ]
 }

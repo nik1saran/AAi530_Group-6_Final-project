@@ -7,6 +7,7 @@ This matrix maps previously identified risk/fault themes to implemented controls
 | Executable ingestion/verification pipeline | `src/person1/pipeline.py`, `src/person1/verification.py` | Implemented |
 | Deterministic normalization and dedup | `src/person1/normalization.py` | Implemented |
 | Source hierarchy and catalog governance | `src/person1/source_catalog.py`, `docs/person1/verification-policy.md` | Implemented |
+| Live retrieval demonstration with logs | `tests/person1/run_live_evidence.py`, `logs/person1/live-fetch-log.jsonl`, `docs/person1/live-retrieval-evidence.md` | Implemented |
 | Field-level schema contract | `schemas/person1/verified-crisis-batch.schema.json`, `tests/person1/validate_schema.py` | Implemented |
 | Conflict detection with explicit details | `src/person1/verification.py` | Implemented |
 | Supersession and freshness precedence | `src/person1/verification.py`, `tests/person1/run_validation.py` | Implemented |
@@ -28,4 +29,3 @@ These are outside current offline fixture scope and require staged implementatio
 - Full multilingual named-entity normalization pipeline
 - Semantic contradiction detection beyond structured field comparisons
 - Historical backfill/pagination adapters per provider API
-

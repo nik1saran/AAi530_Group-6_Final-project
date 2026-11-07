@@ -56,23 +56,32 @@ Person 1 deliverable covers **Data Acquisition & Verification** only:
 3. **Schema Validator**  
    `tests/person1/validate_schema.py`
 
-4. **Validation Results (Human-readable)**  
+4. **Live Evidence Runner (One Command)**  
+   `tests/person1/run_live_evidence.py`
+
+5. **Validation Results (Human-readable)**  
    `tests/person1/test-results.md`
 
-5. **Validation Results (Machine-readable)**  
+6. **Validation Results (Machine-readable)**  
    `tests/person1/test-results.json`
 
-6. **Sample Validated Output**  
+7. **Sample Validated Output**  
    `data/person1/sample-validated-output.json`
 
-7. **Validation Snapshot (Fixed Evidence)**  
+8. **Validation Snapshot (Fixed Evidence)**  
    `tests/person1/test-results-snapshot.md`
 
-8. **Fixture Input Dataset**  
+9. **Fixture Input Dataset**  
    `tests/person1/fixtures/input-claims.json`
 
-9. **Run Manifest Log**  
+10. **Run Manifest Log**  
    `logs/person1/run-manifest.jsonl`
+
+11. **Live Fetch Telemetry Log**  
+   `logs/person1/live-fetch-log.jsonl`
+
+12. **Live Retrieval Evidence**  
+   `docs/person1/live-retrieval-evidence.md`
 
 ## Implementation Artifacts
 

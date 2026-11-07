@@ -15,6 +15,15 @@ python .\tests\person1\run_validation.py
 python .\tests\person1\validate_schema.py
 ```
 
+### Live Evidence Bundle (one command)
+Run:
+
+```powershell
+python .\tests\person1\run_live_evidence.py
+```
+
+This command performs live API pulls (USGS, NOAA, FEMA), writes raw payloads, generates structured validated output, runs schema validation, and emits evidence reports.
+
 ## Expected Console Output
 - File write confirmation for:
   - `tests/person1/test-results.json`
@@ -28,6 +37,10 @@ python .\tests\person1\validate_schema.py
 - `tests/person1/test-results.json` (machine-readable result object)
 - `logs/person1/run-manifest.jsonl` (append-only run manifests)
 - `logs/person1/dead-letter.jsonl` (invalid record captures when present)
+- `data/person1/live/raw/<run_id>/` (live source payload snapshots)
+- `data/person1/live/validated-output-<run_id>.json` (live verified output)
+- `logs/person1/live-fetch-log.jsonl` (live fetch telemetry logs)
+- `tests/person1/live-test-results-<run_id>.md` (live run evidence summary)
 
 ## Troubleshooting
 - If Python is not found, use your full Python path.
