@@ -1,0 +1,202 @@
+{
+  "ingestion_run_id": "run_20261107_070819Z",
+  "generated_at_utc": "2026-11-07T07:08:19Z",
+  "records": [
+    {
+      "record_id": "r1",
+      "event_id": "ev_eq_001",
+      "event_type": "earthquake",
+      "source_name": "USGS Earthquake Hazards Program",
+      "source_url": "https://earthquake.usgs.gov/",
+      "source_tier": "tier_a",
+      "published_at_utc": "2026-11-06T22:31:20Z",
+      "retrieved_at_utc": "2026-11-06T22:32:05Z",
+      "location_name": "Offshore Northern California, US",
+      "claim_text": "Magnitude earthquake detected offshore.",
+      "casualties_reported": null,
+      "injuries_reported": null,
+      "missing_reported": null,
+      "displaced_reported": null,
+      "affected_population_reported": null,
+      "ingestion_key": "4ecbe9637b7a30ad81b08aa4e037437cd05662008c1d20c9cd549a345c8ef22e",
+      "confidence_score": 0.52,
+      "status": "preliminary",
+      "conflict_flags": [],
+      "conflict_details": [],
+      "is_superseded": false,
+      "supersedes_record_id": null,
+      "evidence_notes": "tier=tier_a corroboration=0 freshness=moderate conflicts=0",
+      "ingestion_run_id": "run_20261107_070819Z"
+    },
+    {
+      "record_id": "r2",
+      "event_id": "ev_flood_003",
+      "event_type": "flood",
+      "source_name": "National Weather Service",
+      "source_url": "https://www.weather.gov/",
+      "source_tier": "tier_a",
+      "published_at_utc": "2026-11-06T22:10:00Z",
+      "retrieved_at_utc": "2026-11-06T22:12:19Z",
+      "location_name": "Coastal Louisiana, US",
+      "claim_text": "Flooding with casualties reported.",
+      "casualties_reported": 3,
+      "injuries_reported": 17,
+      "missing_reported": null,
+      "displaced_reported": null,
+      "affected_population_reported": null,
+      "ingestion_key": "ab01a013bc6548703914bc5b5654473afe3a4dcf5fb6f878b39eb044d7032454",
+      "confidence_score": 0.52,
+      "status": "preliminary",
+      "conflict_flags": [
+        "conflict_casualties",
+        "conflict_injuries"
+      ],
+      "conflict_details": [
+        {
+          "field": "casualties_reported",
+          "values_seen": [
+            3,
+            5
+          ],
+          "note": "Numeric discrepancy detected across sources for same event."
+        },
+        {
+          "field": "injuries_reported",
+          "values_seen": [
+            17,
+            23
+          ],
+          "note": "Numeric discrepancy detected across sources for same event."
+        }
+      ],
+      "is_superseded": false,
+      "supersedes_record_id": null,
+      "evidence_notes": "tier=tier_a corroboration=1 freshness=moderate conflicts=2",
+      "ingestion_run_id": "run_20261107_070819Z"
+    },
+    {
+      "record_id": "r3",
+      "event_id": "ev_flood_003",
+      "event_type": "flood",
+      "source_name": "ReliefWeb",
+      "source_url": "https://reliefweb.int/",
+      "source_tier": "tier_b",
+      "published_at_utc": "2026-11-06T22:08:00Z",
+      "retrieved_at_utc": "2026-11-06T22:12:50Z",
+      "location_name": "Coastal Louisiana, US",
+      "claim_text": "Flood impact update with revised counts.",
+      "casualties_reported": 5,
+      "injuries_reported": 23,
+      "missing_reported": null,
+      "displaced_reported": null,
+      "affected_population_reported": null,
+      "ingestion_key": "8229e4e8c8a818db40a2680813d74c72910146f3cd438745a2a0ff0efd95c6a3",
+      "confidence_score": 0.41,
+      "status": "unverified",
+      "conflict_flags": [
+        "conflict_casualties",
+        "conflict_injuries"
+      ],
+      "conflict_details": [
+        {
+          "field": "casualties_reported",
+          "values_seen": [
+            3,
+            5
+          ],
+          "note": "Numeric discrepancy detected across sources for same event."
+        },
+        {
+          "field": "injuries_reported",
+          "values_seen": [
+            17,
+            23
+          ],
+          "note": "Numeric discrepancy detected across sources for same event."
+        }
+      ],
+      "is_superseded": true,
+      "supersedes_record_id": "r2",
+      "evidence_notes": "tier=tier_b corroboration=1 freshness=moderate conflicts=2",
+      "ingestion_run_id": "run_20261107_070819Z"
+    },
+    {
+      "record_id": "r4",
+      "event_id": "ev_epi_004",
+      "event_type": "epidemic",
+      "source_name": "Unverified Social Signal",
+      "source_url": "https://social.example.invalid/post/1",
+      "source_tier": "tier_c",
+      "published_at_utc": "2026-11-06T22:20:00Z",
+      "retrieved_at_utc": "2026-11-06T22:24:32Z",
+      "location_name": "Southeast Asia Region",
+      "claim_text": "Dozens dead in unnamed city.",
+      "casualties_reported": 48,
+      "injuries_reported": null,
+      "missing_reported": null,
+      "displaced_reported": null,
+      "affected_population_reported": null,
+      "ingestion_key": "b6f9fa987e370468a64ee9bf1c11150bfe04973c1b822a40a0fcc51de50d7bd4",
+      "confidence_score": 0.27,
+      "status": "unverified",
+      "conflict_flags": [],
+      "conflict_details": [],
+      "is_superseded": false,
+      "supersedes_record_id": null,
+      "evidence_notes": "tier=tier_c corroboration=0 freshness=moderate conflicts=0",
+      "ingestion_run_id": "run_20261107_070819Z"
+    },
+    {
+      "record_id": "r5",
+      "event_id": "ev_storm_002",
+      "event_type": "storm",
+      "source_name": "National Hurricane Center",
+      "source_url": "https://www.nhc.noaa.gov/",
+      "source_tier": "tier_a",
+      "published_at_utc": "2026-11-06T21:30:00Z",
+      "retrieved_at_utc": "2026-11-06T21:34:41Z",
+      "location_name": "Western Atlantic Basin",
+      "claim_text": "Official advisory update.",
+      "casualties_reported": 0,
+      "injuries_reported": null,
+      "missing_reported": null,
+      "displaced_reported": null,
+      "affected_population_reported": null,
+      "ingestion_key": "94a90f9b11b97ed000a07718cc15159ee841420b81eb1c9554aa174fcf2c69f7",
+      "confidence_score": 0.67,
+      "status": "preliminary",
+      "conflict_flags": [],
+      "conflict_details": [],
+      "is_superseded": false,
+      "supersedes_record_id": null,
+      "evidence_notes": "tier=tier_a corroboration=1 freshness=moderate conflicts=0",
+      "ingestion_run_id": "run_20261107_070819Z"
+    },
+    {
+      "record_id": "r6",
+      "event_id": "ev_storm_002",
+      "event_type": "storm",
+      "source_name": "Institutional Regional Bulletin",
+      "source_url": "https://institutional.example.invalid/storm/brief",
+      "source_tier": "tier_b",
+      "published_at_utc": "2026-11-06T20:10:00Z",
+      "retrieved_at_utc": "2026-11-06T20:14:07Z",
+      "location_name": "Western Atlantic Basin",
+      "claim_text": "Earlier track projection indicated higher risk.",
+      "casualties_reported": 0,
+      "injuries_reported": null,
+      "missing_reported": null,
+      "displaced_reported": null,
+      "affected_population_reported": null,
+      "ingestion_key": "50f49c212cfcd58d9de8939ac3bcc73ea60cc6627c24662723f448def9c177ba",
+      "confidence_score": 0.56,
+      "status": "preliminary",
+      "conflict_flags": [],
+      "conflict_details": [],
+      "is_superseded": true,
+      "supersedes_record_id": "r5",
+      "evidence_notes": "tier=tier_b corroboration=1 freshness=moderate conflicts=0",
+      "ingestion_run_id": "run_20261107_070819Z"
+    }
+  ]
+}

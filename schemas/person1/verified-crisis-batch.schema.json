@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "verified_crisis_batch",
+  "type": "object",
+  "required": ["ingestion_run_id", "generated_at_utc", "records"],
+  "properties": {
+    "ingestion_run_id": { "type": "string", "minLength": 1 },
+    "generated_at_utc": { "type": "string", "minLength": 1 },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "record_id",
+          "event_id",
+          "event_type",
+          "source_name",
+          "source_url",
+          "source_tier",
+          "retrieved_at_utc",
+          "location_name",
+          "claim_text",
+          "status",
+          "confidence_score",
+          "conflict_flags",
+          "is_superseded",
+          "evidence_notes",
+          "ingestion_run_id"
+        ],
+        "properties": {
+          "record_id": { "type": "string" },
+          "event_id": { "type": "string" },
+          "event_type": { "type": "string" },
+          "source_name": { "type": "string" },
+          "source_url": { "type": "string" },
+          "source_tier": { "type": "string", "enum": ["tier_a", "tier_b", "tier_c"] },
+          "published_at_utc": { "type": ["string", "null"] },
+          "retrieved_at_utc": { "type": "string" },
+          "location_name": { "type": "string" },
+          "claim_text": { "type": "string" },
+          "status": { "type": "string", "enum": ["confirmed", "preliminary", "unverified"] },
+          "confidence_score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "conflict_flags": { "type": "array", "items": { "type": "string" } },
+          "conflict_details": { "type": "array" },
+          "is_superseded": { "type": "boolean" },
+          "supersedes_record_id": { "type": ["string", "null"] },
+          "evidence_notes": { "type": "string" },
+          "ingestion_run_id": { "type": "string" }
+        }
+      }
+    }
+  }
+}

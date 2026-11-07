@@ -1,0 +1,31 @@
+name: person1-validation
+
+on:
+  pull_request:
+    paths:
+      - "src/person1/**"
+      - "tests/person1/**"
+      - "schemas/person1/**"
+      - "data/person1/**"
+      - "docs/person1/**"
+  push:
+    branches: [ "main" ]
+    paths:
+      - "src/person1/**"
+      - "tests/person1/**"
+      - "schemas/person1/**"
+      - "data/person1/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run Person 1 validation
+        run: python tests/person1/run_validation.py
+      - name: Validate schema
+        run: python tests/person1/validate_schema.py
+
