@@ -1,2 +1,1 @@
-"""Test package."""
-
+"""Validation test package."""

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Acquisition & Verification Checklist</title>
+  <style>
+    :root {
+      --bg: #f5f7fc;
+      --card: #ffffff;
+      --text: #1a2340;
+      --muted: #5d6887;
+      --line: #d8dfef;
+      --accent: #2f63ff;
+      --done: #0f9d58;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    .wrap {
+      max-width: 940px;
+      margin: 24px auto;
+      padding: 0 16px 24px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+    h1, h2 { margin: 0 0 10px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.08rem; color: var(--accent); }
+    p { margin: 0 0 10px; color: var(--muted); }
+    .progress { font-weight: 600; color: #23345f; }
+    label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+    input[type="checkbox"] { margin-right: 8px; }
+    .done { color: var(--done); text-decoration: line-through; }
+    .note { font-size: 0.9rem; color: var(--muted); }
+    .btn {
+      border: 1px solid #2f4c9a;
+      background: #edf2ff;
+      color: #23345f;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-right: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Data Acquisition & Verification Checklist</h1>
+      <p>Project: Public Catastrophic Crisis Briefing Assistant</p>
+      <p class="progress">Progress: <span id="progress">0 / 0 complete</span></p>
+      <button class="btn" id="checkAll" type="button">Check all</button>
+      <button class="btn" id="uncheckAll" type="button">Uncheck all</button>
+    </div>
+
+    <div class="card">
+      <h2>1. Scope Lock</h2>
+      <label><input class="item" type="checkbox" />Scope restricted to data acquisition and verification only</label>
+      <label><input class="item" type="checkbox" />No summarization, briefing generation, or UI tasks included</label>
+      <label><input class="item" type="checkbox" />Deliverable defined as verified structured crisis information</label>
+    </div>
+
+    <div class="card">
+      <h2>2. Source Framework</h2>
+      <label><input class="item" type="checkbox" />Official APIs and information sources integrated</label>
+      <label><input class="item" type="checkbox" />Source credibility framework documented (tiering/rules)</label>
+      <label><input class="item" type="checkbox" />Corroboration criteria for confirmed status finalized</label>
+    </div>
+
+    <div class="card">
+      <h2>3. Data Contract</h2>
+      <label><input class="item" type="checkbox" />Structured schema implemented with required fields</label>
+      <label><input class="item" type="checkbox" />Timestamps captured for retrieval and publication</label>
+      <label><input class="item" type="checkbox" />Source attribution fields enforced for all records</label>
+      <label><input class="item" type="checkbox" />Status values restricted to confirmed, preliminary, unverified</label>
+    </div>
+
+    <div class="card">
+      <h2>4. Verification & Conflict Detection</h2>
+      <label><input class="item" type="checkbox" />Conflicting reports are detected and explicitly flagged</label>
+      <label><input class="item" type="checkbox" />Numeric conflicts detected (casualties, injuries, displacement)</label>
+      <label><input class="item" type="checkbox" />Location/time contradictions detected and logged</label>
+      <label><input class="item" type="checkbox" />Each status decision has evidence notes</label>
+    </div>
+
+    <div class="card">
+      <h2>5. Quality Gates</h2>
+      <label><input class="item" type="checkbox" />100% records include source name, URL, and retrieval timestamp</label>
+      <label><input class="item" type="checkbox" />No record marked confirmed without policy-compliant evidence</label>
+      <label><input class="item" type="checkbox" />Pipeline output is reproducible with the same input snapshot</label>
+      <label><input class="item" type="checkbox" />Classification coverage complete across all records</label>
+    </div>
+
+    <div class="card">
+      <h2>6. Test Coverage</h2>
+      <label><input class="item" type="checkbox" />Single authoritative bulletin scenario passed</label>
+      <label><input class="item" type="checkbox" />Conflicting multi-source scenario passed</label>
+      <label><input class="item" type="checkbox" />Rapid update progression scenario passed</label>
+      <label><input class="item" type="checkbox" />Uncorroborated rumor scenario handled as unverified</label>
+      <label><input class="item" type="checkbox" />Stale versus fresh source contradiction scenario passed</label>
+    </div>
+
+    <div class="card">
+      <h2>7. Submission Artifacts</h2>
+      <label><input class="item" type="checkbox" />Verification policy document completed</label>
+      <label><input class="item" type="checkbox" />Data schema specification completed</label>
+      <label><input class="item" type="checkbox" />Decision logic and classification rules documented</label>
+      <label><input class="item" type="checkbox" />Test results matrix prepared</label>
+      <label><input class="item" type="checkbox" />Sample validated JSON output included</label>
+    </div>
+
+    <div class="card">
+      <p class="note">Checklist state is saved in your browser using localStorage.</p>
+    </div>
+  </div>
+
+  <script>
+    const KEY = "crisis-data-verification-checklist-v1";
+    const boxes = [...document.querySelectorAll(".item")];
+    const progress = document.getElementById("progress");
+
+    function render() {
+      let done = 0;
+      boxes.forEach((box) => {
+        const label = box.parentElement;
+        if (box.checked) {
+          done += 1;
+          label.classList.add("done");
+        } else {
+          label.classList.remove("done");
+        }
+      });
+      progress.textContent = `${done} / ${boxes.length} complete`;
+    }
+
+    function save() {
+      localStorage.setItem(KEY, JSON.stringify(boxes.map(b => b.checked)));
+    }
+
+    function load() {
+      try {
+        const raw = localStorage.getItem(KEY);
+        if (!raw) return;
+        const arr = JSON.parse(raw);
+        if (!Array.isArray(arr)) return;
+        boxes.forEach((b, i) => { b.checked = Boolean(arr[i]); });
+      } catch (_) {
+        // Ignore malformed saved state.
+      }
+    }
+
+    boxes.forEach((b) => b.addEventListener("change", () => { save(); render(); }));
+    document.getElementById("checkAll").addEventListener("click", () => {
+      boxes.forEach((b) => { b.checked = true; });
+      save();
+      render();
+    });
+    document.getElementById("uncheckAll").addEventListener("click", () => {
+      boxes.forEach((b) => { b.checked = false; });
+      save();
+      render();
+    });
+
+    load();
+    render();
+  </script>
+</body>
+</html>

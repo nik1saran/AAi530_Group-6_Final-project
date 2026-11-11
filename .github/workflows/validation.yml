@@ -1,0 +1,30 @@
+name: crisis-validation
+
+on:
+  pull_request:
+    paths:
+      - "src/crisis/**"
+      - "tests/**"
+      - "schemas/**"
+      - "data/**"
+      - "docs/**"
+  push:
+    branches: [ "main" ]
+    paths:
+      - "src/crisis/**"
+      - "tests/**"
+      - "schemas/**"
+      - "data/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run validation
+        run: python tests/run_validation.py
+      - name: Validate schema
+        run: python tests/validate_schema.py

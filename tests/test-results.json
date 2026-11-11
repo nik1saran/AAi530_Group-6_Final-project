@@ -1,0 +1,57 @@
+{
+  "input_file": "tests\\fixtures\\input-claims.json",
+  "output_file": "data\\sample-validated-output.json",
+  "generated_at_utc": "2026-11-11T20:12:00Z",
+  "record_count": 8,
+  "active_record_count": 2,
+  "summary": {
+    "total_checks": 7,
+    "passed_checks": 7,
+    "failed_checks": 0,
+    "overall_pass": true
+  },
+  "checks": [
+    {
+      "id": "QG-01",
+      "name": "Attribution coverage",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "QG-02",
+      "name": "No unsupported confirmations",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "QG-03",
+      "name": "Conflict transparency",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "QG-04",
+      "name": "Freshness precedence",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "QG-05",
+      "name": "Deterministic outputs",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "QG-06",
+      "name": "Status and confidence validity",
+      "passed": true,
+      "details": []
+    },
+    {
+      "id": "QG-07",
+      "name": "Lifecycle filtering and FEMA county retention",
+      "passed": true,
+      "details": []
+    }
+  ]
+}

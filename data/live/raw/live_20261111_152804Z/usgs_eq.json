@@ -1,0 +1,141 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generated": 1794410848000,
+    "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
+    "title": "USGS All Earthquakes, Past Hour",
+    "status": 200,
+    "api": "2.8.2",
+    "count": 3
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 0.9,
+        "place": "77 km WNW of Ninilchik, Alaska",
+        "time": 1794410619325,
+        "updated": 1794410665417,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjdrfy",
+        "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/aka2026wjdrfy.geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "automatic",
+        "tsunami": 0,
+        "sig": 12,
+        "net": "ak",
+        "code": "a2026wjdrfy",
+        "ids": ",aka2026wjdrfy,",
+        "sources": ",ak,",
+        "types": ",origin,phase-data,",
+        "nst": 10,
+        "dmin": 0.1,
+        "rms": 1,
+        "gap": 166,
+        "magType": "ml",
+        "type": "earthquake",
+        "title": "M 0.9 - 77 km WNW of Ninilchik, Alaska"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -152.926,
+          60.349,
+          5
+        ]
+      },
+      "id": "aka2026wjdrfy"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 1.5,
+        "place": "88 km E of Ugashik, Alaska",
+        "time": 1794408939378,
+        "updated": 1794408994722,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjctbi",
+        "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/aka2026wjctbi.geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "automatic",
+        "tsunami": 0,
+        "sig": 35,
+        "net": "ak",
+        "code": "a2026wjctbi",
+        "ids": ",aka2026wjctbi,",
+        "sources": ",ak,",
+        "types": ",origin,phase-data,",
+        "nst": 11,
+        "dmin": 0.2,
+        "rms": 0.4,
+        "gap": 226,
+        "magType": "ml",
+        "type": "earthquake",
+        "title": "M 1.5 - 88 km E of Ugashik, Alaska"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -155.934,
+          57.649,
+          19.8
+        ]
+      },
+      "id": "aka2026wjctbi"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 2.2,
+        "place": "59 km W of Happy Valley, Alaska",
+        "time": 1794407611803,
+        "updated": 1794407775728,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026wjbzzm",
+        "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/aka2026wjbzzm.geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "automatic",
+        "tsunami": 0,
+        "sig": 74,
+        "net": "ak",
+        "code": "a2026wjbzzm",
+        "ids": ",aka2026wjbzzm,",
+        "sources": ",ak,",
+        "types": ",origin,phase-data,",
+        "nst": 53,
+        "dmin": 0.1,
+        "rms": 0.6,
+        "gap": 66,
+        "magType": "ml",
+        "type": "earthquake",
+        "title": "M 2.2 - 59 km W of Happy Valley, Alaska"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -152.78,
+          60.028,
+          113
+        ]
+      },
+      "id": "aka2026wjbzzm"
+    }
+  ],
+  "bbox": [
+    -155.934,
+    57.649,
+    5,
+    -152.78,
+    60.349,
+    113
+  ]
+}

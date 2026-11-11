@@ -1,0 +1,49 @@
+{
+  "run_id": "live_20261111_201200Z",
+  "generated_at_utc": "2026-11-11T20:12:01Z",
+  "input_claims": "data/live/input-claims-live_20261111_201200Z.json",
+  "validated_output": "data/live/validated-output-live_20261111_201200Z.json",
+  "record_count": 22,
+  "schema_validation": {
+    "passed": true,
+    "message": "Schema validation checks passed."
+  },
+  "fetch_rows": [
+    {
+      "run_id": "live_20261111_201200Z",
+      "source_id": "usgs_eq",
+      "source_name": "USGS Earthquake Hazards Program",
+      "source_url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
+      "retrieved_at_utc": "2026-11-11T20:12:00Z",
+      "http_status": 200,
+      "latency_ms": 132,
+      "record_count": 6,
+      "error": null,
+      "raw_file": "data/live/raw/live_20261111_201200Z/usgs_eq.json"
+    },
+    {
+      "run_id": "live_20261111_201200Z",
+      "source_id": "noaa_alerts",
+      "source_name": "NOAA National Weather Service Alerts",
+      "source_url": "https://api.weather.gov/alerts/active",
+      "retrieved_at_utc": "2026-11-11T20:12:00Z",
+      "http_status": 200,
+      "latency_ms": 503,
+      "record_count": 8,
+      "error": null,
+      "raw_file": "data/live/raw/live_20261111_201200Z/noaa_alerts.json"
+    },
+    {
+      "run_id": "live_20261111_201200Z",
+      "source_id": "fema_disasters",
+      "source_name": "FEMA Open Data",
+      "source_url": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries?$top=25&$orderby=declarationDate%20desc",
+      "retrieved_at_utc": "2026-11-11T20:12:01Z",
+      "http_status": 200,
+      "latency_ms": 219,
+      "record_count": 8,
+      "error": null,
+      "raw_file": "data/live/raw/live_20261111_201200Z/fema_disasters.json"
+    }
+  ]
+}
